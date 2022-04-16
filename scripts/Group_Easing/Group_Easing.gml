@@ -4,21 +4,21 @@ function easing_get(type, t) {
     return animcurve_channel_evaluate(curve.channels[type], t);
 }
 
-function easing_tween(value_start, value_end, f, type) {
-    return easing_get(type, f) * (value_end - value_start) + value_start;
-};
+function ease(val1, val2, f, type) {
+    return easing_get(type, f) * (val2 - val1) + val1;
+}
 
-enum AnimationTweens {
+enum Easings {
     LINEAR,
-    EASE_QUAD_I, EASE_QUAD_O, EASE_QUAD_IO,
-    EASE_CUBE_I, EASE_CUBE_O, EASE_CUBE_IO,
-    EASE_QUART_I, EASE_QUART_O, EASE_QUART_IO,
-    EASE_EXP_I, EASE_EXP_O, EASE_EXP_IO,
-    EASE_CIRC_I, EASE_CIRC_O, EASE_CIRC_IO,
-    EASE_BACK_I, EASE_BACK_O, EASE_BACK_IO,
-    EASE_ELASTIC_I, EASE_ELASTIC_O, EASE_ELASTIC_IO,
-    EASE_BOUNCE_I, EASE_BOUNCE_O, EASE_BOUNCE_IO,
-    EASE_FAST_TO_SLOW, EASE_MID_TO_SLOW,
+    QUAD_I, QUAD_O, QUAD_IO,
+    CUBE_I, CUBE_O, CUBE_IO,
+    QUART_I, QUART_O, QUART_IO,
+    EXP_I, EXP_O, EXP_IO,
+    CIRC_I, CIRC_O, CIRC_IO,
+    BACK_I, BACK_O, BACK_IO,
+    ELASTIC_I, ELASTIC_O, ELASTIC_IO,
+    BOUNCE_I, BOUNCE_O, BOUNCE_IO,
+    FAST_TO_SLOW, MID_TO_SLOW,
 }
 
 // just in case you want to attach strings to them
