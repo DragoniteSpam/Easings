@@ -20,3 +20,17 @@ enum AnimationTweens {
     EASE_BOUNCE_I, EASE_BOUNCE_O, EASE_BOUNCE_IO,
     EASE_FAST_TO_SLOW, EASE_MID_TO_SLOW,
 }
+
+// just in case you want to attach strings to them
+global.animation_tween_names = [
+    "Linear",
+    "Quadratic In", "Quadratic Out", "Quadratic In/Out",
+    "Cubic In", "Cubic Out", "Cubic In/Out",
+    "Quartic In", "Quartic Out", "Quartic In/Out",
+    "Exponential In", "Exponential Out", "Exponential In/Out",
+    "Circular In", "Circular Out", "Circular In/Out",
+    "Back In", "Back Out", "There and Back Again",
+    "Elastic In", "Elastic Out", "Elastic In/Out",
+    "Bounce In", "Bounce Out", "Bounce In/Out",
+    "Fast to Slow", "Mid to Slow",
+];
